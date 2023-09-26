@@ -53,7 +53,7 @@ const ReviewModal = ({
         userId: session?.user?._id // User ID from the session information
       }
 
-      const res = await fetch("http://localhost:3000/api/review", {
+      const res = await fetch("https://bookkart-ecom-git-main-amit1924.vercel.app/api/review", {
         headers, // Set request headers
         method: "POST", // HTTP method: POST
         body: JSON.stringify(body) // Convert body data to JSON string

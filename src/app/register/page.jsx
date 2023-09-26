@@ -30,7 +30,7 @@ const Register = () => {
 
         try {
             // Send a POST request to register the user
-            const res = await fetch("http://localhost:3000/api/register", {
+            const res = await fetch("https://bookkart-ecom-git-main-amit1924.vercel.app/api/register", {
 
                 headers: {
                     "Content-Type": "application/json"

@@ -58,7 +58,7 @@ const Details = (ctx) => {
     const fetchReviews = async () => {
       try {
         const res = await fetch(
-          `http://localhost:3000/api/review?bookId=${id}`
+          `https://bookkart-ecom-git-main-amit1924.vercel.app/api/review?bookId=${id}`
         );
         const data = await res.json();
 

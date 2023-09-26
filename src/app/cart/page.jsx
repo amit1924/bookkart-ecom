@@ -45,7 +45,7 @@ const Cart = () => {
 
 //     // Making a POST request to create a checkout session
     const res = await fetch(
-      "http://localhost:3000/api/checkout",
+      "https://bookkart-ecom-git-main-amit1924.vercel.app/api/checkout",
       {
         headers: {
           "Content-Type": "application/json",

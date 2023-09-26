@@ -19,9 +19,9 @@ export async function POST(req) {
       mode: "payment",
       payment_method_types: ["card"],
       success_url:
-        "http://localhost:3000/success",
+        "https://bookkart-ecom-git-main-amit1924.vercel.app//success",
       cancel_url:
-        "http://localhost:3000",
+        "https://bookkart-ecom-git-main-amit1924.vercel.app/",
     });
 
     // Logging the session information
