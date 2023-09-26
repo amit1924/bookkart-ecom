@@ -21,7 +21,7 @@ const nextConfig = {
                 headers: [
                     {
                         key: "Access-Control-Allow-Origin",
-                        value: "https://book-store-ecommerce-git-main-webdevmania.vercel.app",
+                        value: "https://bookkart-ecom-git-main-amit1924.vercel.app",
                     },
                     // Allows for specific methods accepted
                     {

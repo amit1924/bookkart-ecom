@@ -1,5 +1,5 @@
 // Importing necessary modules and functions
-// import getCorsHeaders from "@/lib/apiCors";
+import getCorsHeaders from "@/lib/apiCors";
 import db from "@/lib/db";
 import { verifyJwtToken } from "@/lib/jwt";
 import Review from "@/models/Review";
@@ -18,7 +18,7 @@ export async function GET(req) {
         const reviews = await Review.find({ bookId }).limit(16).populate("userId").select("-password")
 
         // Returning a response with the reviews data
-        return new Response(JSON.stringify(reviews), { status: 200 })
+        return new Response(JSON.stringify(reviews), { status: 200, headers: getCorsHeaders(req.headers.get("origin") || "") })
     } catch (error) {
         // Handling any potential errors and logging them
         console.log(error)
@@ -52,7 +52,7 @@ export async function POST(req) {
         const newReview = await Review.create(body)
 
         // Returning a response with the newly created review
-        return new Response(JSON.stringify(newReview), { status: 201 })
+        return new Response(JSON.stringify(newReview), { status: 201, headers: getCorsHeaders(req.headers.get("origin") || "") })
     } catch (error) {
         // Handling any potential errors and returning a server error response
         return new Response(JSON.stringify(error), { status: 500 })

@@ -1,5 +1,5 @@
 // Importing a function to get CORS headers
-// import getCorsHeaders from "@/lib/apiCors";
+import getCorsHeaders from "@/lib/apiCors";
 
 // Importing the Stripe library
 import Stripe from "stripe";
@@ -19,7 +19,7 @@ export async function POST(req) {
       mode: "payment",
       payment_method_types: ["card"],
       success_url:
-        "https://bookkart-ecom-git-main-amit1924.vercel.app//success",
+        "https://bookkart-ecom-git-main-amit1924.vercel.app/success",
       cancel_url:
         "https://bookkart-ecom-git-main-amit1924.vercel.app/",
     });
@@ -30,7 +30,7 @@ export async function POST(req) {
     // Returning the session information as a JSON response
     return new Response(JSON.stringify(session), {
       status: 200,
-    //   headers: getCorsHeaders(req.headers.get("origin") || ""),
+      headers: getCorsHeaders(req.headers.get("origin") || ""),
     });
   } catch (error) {
     // Handling any potential errors

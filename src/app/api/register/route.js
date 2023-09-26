@@ -1,5 +1,6 @@
 // Import necessary modules and models
 import db from "@/lib/db"; // Import the db module for database connection
+import getCorsHeaders from "@/lib/apiCors";
 import bcrypt from 'bcrypt'; // Import the bcrypt library for password hashing
 import User from "@/models/User"; // Import the User model (assuming it's defined in a file named 'User.js' in a folder named 'models')
 
@@ -30,7 +31,7 @@ export async function POST(req) {
         const { password, ...user } = newUser._doc;
 
         // Return the user object as a JSON response with a status code of 200 (OK)
-        return new Response(JSON.stringify(user), { status: 200 });
+        return new Response(JSON.stringify(user), { status: 200, headers: getCorsHeaders(req.headers.get("origin") || "") })
     } catch (err) {
         // If an error occurs, return the error message as a JSON response with a status code of 500 (Internal Server Error)
         return new Response(JSON.stringify(err.message), { status: 500 });
