@@ -1,0 +1,201 @@
+.container {
+    margin-top: 2.5rem;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 5rem;
+}
+
+.wrapper {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.bookDetails {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 5rem;
+}
+
+.left {
+    flex: 1;
+    width: 55%;
+    height: 850px;
+}
+
+.left > img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 32px;
+}
+
+.desc {
+    margin: 3.75rem 0;
+    color: #222;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.section {
+    margin-top: 3.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book_pages {
+    font-size: 20px;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.cart,
+.reviewButton {
+    border: none;
+    outline: none;
+    margin-top: 7.5rem;
+    padding: 0.75rem 1.5rem;
+    width: 175px;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: 150ms;
+    cursor: pointer;
+    background-color: #28a745; 
+}
+
+
+
+.cart {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    color: white;
+}
+
+.reviewButton {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.cart:hover,
+.reviewButton:hover {
+    background-color: #e83808; /* Darken the button on hover */
+}
+
+.reviews {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5rem;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 1500px) {
+    .left {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .left {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .left {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bookDetails {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .left {
+        height: auto;
+    }
+
+    .desc,
+    .section {
+        margin-top: 2rem;
+    }
+
+    .cart,
+    .reviewButton {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 28px;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    .book_pages,
+    .price {
+        font-size: 18px;
+    }
+
+    .cart,
+    .reviewButton {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .desc {
+        font-size: 14px;
+    }
+
+    .book_pages,
+    .price {
+        font-size: 16px;
+    }
+
+    .cart,
+    .reviewButton {
+        font-size: 16px;
+    }
+}

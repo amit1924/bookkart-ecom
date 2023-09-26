@@ -1,0 +1,158 @@
+.container {
+    height: 75px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #FF6B6B, #FF8E53);
+    box-shadow: 2px 5px 27px -8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.wrapper {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    color: inherit;
+    text-decoration: none;
+}
+
+.left > h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.logoutButton {
+    border: none;
+    outline: none;
+    padding: 0.25rem 0.75rem;
+    color: var(--primary-color);
+    border-radius: 8px;
+    transition: 150ms;
+    cursor: pointer;
+}
+
+.logoutButton:hover {
+    color: #e90b0b;
+}
+
+.login {
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    outline: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 150ms;
+}
+
+.login:hover {
+    background-color: #000000;
+}
+
+.register {
+    color: white;
+}
+
+.cartContainer {
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.cartQuantity {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    color: var(--primary-color);
+    bottom: 0.75rem;
+    left: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1450px) {
+    .left > h2 {
+        font-size: 26px;
+    }
+
+    .right {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .left > h2 {
+        font-size: 24px;
+    }
+
+    .right {
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .left > h2 {
+        font-size: 20px;
+    }
+
+    .logoutButton {
+        padding: 0.25rem 0.5rem;
+    }
+
+    .login {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .left > h2 {
+        font-size: 18px;
+    }
+
+    .logoutButton {
+        padding: 0.25rem 0.5rem;
+    }
+
+    .login {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .left > h2 {
+        font-size: 16px;
+    }
+
+    .logoutButton {
+        padding: 0.2rem 0.4rem;
+    }
+
+    .login {
+        padding: 0.4rem 0.8rem;
+    }
+}

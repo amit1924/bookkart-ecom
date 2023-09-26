@@ -1,0 +1,207 @@
+.container {
+    height: calc(100vh - 75px);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4) url("../../assets/library.jpg") center/cover;
+    background-blend-mode: darken;
+    position: relative;
+}
+
+.wrapper {
+    position: absolute;
+    top: 13.5rem;
+    left: 10rem;
+}
+
+.title {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.desc {
+    font-size: 22px;
+    color: #efefef;
+}
+
+.inputContainer {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 12px;
+    background-color: white;
+    overflow: hidden;
+    padding: 0 0.5rem;
+}
+
+.inputContainer > input {
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 0.5rem;
+    transition: padding 150ms;
+}
+
+.inputContainer > input:focus {
+    padding-left: 0.75rem;
+}
+
+.inputContainer > button {
+    width: 20%;
+    height: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.inputContainer > button:hover {
+    background-color: var(--primary-color-darker);
+}
+
+/* Media Queries */
+
+@media (max-width: 1450px) {
+    .container {
+        height: calc(100vh - 75px);
+    }
+
+    .wrapper {
+        top: 11.5rem;
+        left: 8rem;
+    }
+
+    .title {
+        font-size: 42px;
+        margin-bottom: 1.5rem;
+    }
+
+    .desc {
+        font-size: 20px;
+    }
+
+    .inputContainer {
+        width: 300px;
+    }
+
+    .inputContainer > input {
+        padding-left: 0.4rem;
+    }
+
+    .inputContainer > button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .wrapper {
+        top: 10.5rem;
+        left: 7rem;
+    }
+
+    .title {
+        font-size: 38px;
+        margin-bottom: 1rem;
+    }
+
+    .desc {
+        font-size: 18px;
+    }
+
+    .inputContainer {
+        width: 250px;
+    }
+
+    .inputContainer > input {
+        padding-left: 0.3rem;
+    }
+
+    .inputContainer > button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        top: 9.5rem;
+        left: 6rem;
+    }
+
+    .title {
+        font-size: 32px;
+        margin-bottom: 0.5rem;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    .inputContainer {
+        width: 200px;
+    }
+
+    .inputContainer > input {
+        padding-left: 0.2rem;
+    }
+
+    .inputContainer > button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    .wrapper {
+        top: 9rem;
+        left: 5.5rem;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-bottom: 0.3rem;
+    }
+
+    .inputContainer {
+        width: 180px;
+    }
+
+    .inputContainer > input {
+        padding-left: 0.1rem;
+    }
+
+    .inputContainer > button {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .wrapper {
+        top: 8.5rem;
+        left: 5rem;
+    }
+
+    .title {
+        font-size: 26px;
+        margin-bottom: 0.2rem;
+    }
+
+    .desc {
+        font-size: 14px;
+    }
+
+    .inputContainer {
+        width: 150px;
+    }
+
+    .inputContainer > input {
+        padding-left: 0.1rem;
+    }
+
+    .inputContainer > button {
+        font-size: 10px;
+    }
+}

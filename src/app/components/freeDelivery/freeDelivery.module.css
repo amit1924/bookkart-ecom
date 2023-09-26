@@ -1,0 +1,21 @@
+.freeDelivery {
+    padding: 0.3rem 0;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(to right, #d85610,black,pink);
+    color: #efefef;
+    font-size: 12px;
+    animation: flash 3s infinite; /* Add animation property */
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
